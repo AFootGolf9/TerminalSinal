@@ -4,8 +4,10 @@ import street.sinal.repository.AjustTime;
 
 public class StartSinal {
 	public static void startSinal(String[] cores, int alerta, int[] tempos) {
-		tempos[4] = AjustTime.toMilli(tempos[4]);
-		tempos[5] = AjustTime.toMilli(tempos[5]);
+		tempos[0] = AjustTime.toMilli(tempos[0]);
+		tempos[1] = AjustTime.toMilli(tempos[1]);
+		tempos[2] = AjustTime.toMilli(tempos[2]);
+		
 		while (true) {
 			normalCicle(cores, tempos);
 			alertCicle(cores[alerta], tempos);
