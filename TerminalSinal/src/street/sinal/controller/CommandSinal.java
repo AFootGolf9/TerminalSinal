@@ -5,7 +5,7 @@ import street.sinal.service.StartSinal;
 
 public class CommandSinal {
 	public static final Scanner SC = new Scanner(System.in);
-	public static void Command() {
+	public static void command() {
 		 var invalid = false;
 		 int[] times = new int[5];
 		 String[] colors = new String[3];
@@ -25,23 +25,22 @@ public class CommandSinal {
 		return "";
 	}
 	
-		 static double readInt(String label) {
-	            var valor = 0.0;
-	            var invalid = false;
-	            do {
-	                try {
-	                    System.out.print(label);
-	                    String timeRead = SC.nextLine();
-	                    valor = Integer.parseInt(timeRead);
-	                    invalid = false;
-	                } catch (NumberFormatException ex) {
-	                    System.out.println("WARNING> THIS VALLUE IF INVALID!");
-	                    invalid = true;
-	                }
-	            } while (invalid);
-	            return valor;
-	        }
-	}
+	static double readInt(String label) {
+        var valor = 0.0;
+        var invalid = false;
+        do {
+            try {
+                System.out.print(label);
+                String timeRead = SC.nextLine();
+                valor = Integer.parseInt(timeRead);
+                invalid = false;
+	        } catch (NumberFormatException ex) {
+                System.out.println("WARNING> THIS VALLUE IF INVALID!");
+                invalid = true;
+            }
+        } while (invalid);
+        return valor;
+    }
 	
 	private static void callSinal(String[] cores, int alerta, int[] tempos) {
 		System.out.println("Start Signal [y/n]");
