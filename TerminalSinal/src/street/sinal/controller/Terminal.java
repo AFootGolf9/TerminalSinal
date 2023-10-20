@@ -23,16 +23,16 @@ public class Terminal {
         return valor;
     }
 
-    static double lerInt(String label) {
-        var valor = 0.0;
+    static int readInt(String label, int x) {
+        var valor = 0;
         var invalid = false;
         do {
             try {
                 System.out.print(label);
                 String textoLido = SC.nextLine();
-                valor = Double.parseDouble(textoLido);
+                valor = Integer.parseInt(textoLido);
                 invalido = false;
-				if(valor <= 0){
+				if(valor <= x){
 					invalid = true;
 				}
             } catch (NumberFormatException ex) {
