@@ -25,22 +25,6 @@ public class CommandSinal {
 		return "";
 	}
 	
-	static double readInt(String label) {
-        var valor = 0.0;
-        var invalid = false;
-        do {
-            try {
-                System.out.print(label);
-                String timeRead = SC.nextLine();
-                valor = Integer.parseInt(timeRead);
-                invalid = false;
-	        } catch (NumberFormatException ex) {
-                System.out.println("WARNING> THIS VALLUE IF INVALID!");
-                invalid = true;
-            }
-        } while (invalid);
-        return valor;
-    }
 	
 	private static void callSinal(String[] cores, int alerta, int[] tempos) {
 		System.out.println("Start Signal [y/n]");
