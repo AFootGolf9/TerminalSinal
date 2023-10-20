@@ -5,7 +5,7 @@ import street.sinal.service.StartSinal;
 
 public class CommandSinal {
 	public static final Scanner SC = new Scanner(System.in);
-	public static void CommandSinal() {
+	public static void Command() {
 		 var invalid = false;
 		 int[] times = new int[5];
 		 String[] colors = new String[3];
