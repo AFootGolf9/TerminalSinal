@@ -42,21 +42,6 @@ public class CommandSinal {
 			}
 		}
 	}
-	 static double lerInt(String label) {
-        var valor = 0.0;
-        var invalido = false;
-        do {
-            try {
-                System.out.print(label);
-                String textoLido = SC.nextLine();
-                valor = Double.parseDouble(textoLido);
-                invalido = false;
-            } catch (NumberFormatException ex) {
-                System.out.println("ATENCAO> Valor informado é inválido!");
-                invalido = true;
-            }
-        } while (invalido);
-        return valor;
-    }
+	 
 }
 

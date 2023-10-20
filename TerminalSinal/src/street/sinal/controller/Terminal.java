@@ -22,5 +22,25 @@ public class Terminal {
         } while (invalid);
         return valor;
     }
+
+    static double lerInt(String label) {
+        var valor = 0.0;
+        var invalid = false;
+        do {
+            try {
+                System.out.print(label);
+                String textoLido = SC.nextLine();
+                valor = Double.parseDouble(textoLido);
+                invalido = false;
+				if(valor <= 0){
+					invalid = true;
+				}
+            } catch (NumberFormatException ex) {
+                System.out.println("ATENCAO> Valor informado é inválido!");
+                invalido = true;
+            }
+        } while (invalido);
+        return valor;
+    }
     
 }
