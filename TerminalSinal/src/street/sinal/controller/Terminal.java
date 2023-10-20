@@ -22,4 +22,5 @@ public class Terminal {
         } while (invalid);
         return valor;
     }
+    
 }
