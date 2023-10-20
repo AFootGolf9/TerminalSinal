@@ -15,7 +15,7 @@ public class StartSinal {
 	}
 	
 	private static void normalCicle(String[] colors, int[] times) {
-		for(int i = 0; i < times[4]; i ++) {
+		for(int i = 0; i < times[3]; i ++) {
 			System.out.println(colors[0]);
 			try {
 				Thread.sleep(times[0]);
@@ -43,7 +43,7 @@ public class StartSinal {
 	}
 
 	private static void alertCicle(String cor, int[] times) {
-		for(int i = 0; i < times[5]; i ++) {
+		for(int i = 0; i < times[4]; i ++) {
 			System.out.println(cor);
 			System.out.println();
 			

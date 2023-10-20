@@ -7,12 +7,12 @@ public class Terminal {
     private static final Scanner SC = new Scanner(System.in);
 
     public static String readColor(String label) {
-        String valor = "";
+        String timeRead = "";
         var invalid = false;
         do {
             try {
                 System.out.print(label);
-                String timeRead = SC.nextLine();
+                timeRead = SC.nextLine();
                 Integer.parseInt(timeRead);
                 invalid = true;
                 System.out.println("WARNING> THIS VALLUE IS INVALID!");
@@ -20,7 +20,7 @@ public class Terminal {
                 invalid = false;
             }
         } while (invalid);
-        return valor;
+        return timeRead;
     }
 
     static int readInt(String label, int x) {
@@ -29,17 +29,17 @@ public class Terminal {
         do {
             try {
                 System.out.print(label);
-                String textoLido = SC.nextLine();
-                valor = Integer.parseInt(textoLido);
-                invalido = false;
+                String readText = SC.nextLine();
+                valor = Integer.parseInt(readText);
+                invalid = false;
 				if(valor <= x){
 					invalid = true;
 				}
             } catch (NumberFormatException ex) {
-                System.out.println("ATENCAO> Valor informado é inválido!");
-                invalido = true;
+                System.out.println("WARNING> THIS VALLUE IS INVALID!");
+                invalid = true;
             }
-        } while (invalido);
+        } while (invalid);
         return valor;
     }
     
