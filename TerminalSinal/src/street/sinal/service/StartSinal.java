@@ -10,65 +10,33 @@ public class StartSinal {
 		
 		while (true) {
 			normalCicle(colors, times);
-			alertCicle(colors[alert], times);
+			alertCicle(colors[alert], times[alert], times[4]);
 		}
 	}
 	
 	private static void normalCicle(String[] colors, int[] times) {
 		for(int i = 0; i < times[3]; i ++) {
-			System.out.println(colors[0]);
-			try {
-				Thread.sleep(times[0]);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			System.out.println(colors[1]);
-			try {
-				Thread.sleep(times[1]);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			System.out.println(colors[2]);
-			try {
-				Thread.sleep(times[2]);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			for(int j = 0; j < 3; j ++) {
+				System.out.println(colors[j]);
+				System.out.println();
+				
+				try {
+					Thread.sleep(times[j]);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 		}
 	}
 
-	private static void alertCicle(String cor, int[] times) {
-		for(int i = 0; i < times[4]; i ++) {
+	private static void alertCicle(String cor, int time, int rounds) {
+		for(int i = 0; i < rounds; i ++) {
 			System.out.println(cor);
 			System.out.println();
 			
 			try {
-				Thread.sleep(times[0]);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			System.out.println(cor);
-			System.out.println();
-			
-			try {
-				Thread.sleep(times[1]);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			
-			System.out.println(cor);
-			System.out.println();
-			
-			try {
-				Thread.sleep(times[2]);
+				Thread.sleep(time);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

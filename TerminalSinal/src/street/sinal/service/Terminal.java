@@ -1,4 +1,4 @@
-package street.sinal.controller;
+package street.sinal.service;
 
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class Terminal {
         return timeRead;
     }
 
-    static int readInt(String label, int x) {
+    public static int readInt(String label, int x) {
         var valor = 0;
         var invalid = false;
         do {
