@@ -11,11 +11,11 @@ public class CommandSinal {
 		String[] colors = new String[3];
 		int alert;
 		 
-		colors[0] = Terminal.readColor("Put the first color : ");
+		colors[0] = Terminal.readColor("\nPut the first color : ");
 
 		do{
 			invalid = false;
-			colors[1] = Terminal.readColor("Put the second color : ");
+			colors[1] = Terminal.readColor("\nPut the second color : ");
 			if (colors[1].equalsIgnoreCase(colors[0])) {
 				invalid = true;
 				System.out.println("WARNING> THIS VALLUE IS INVALID!");
@@ -24,37 +24,36 @@ public class CommandSinal {
 
 		do{
 			invalid = false;
-			colors[2] = Terminal.readColor("Put the third color : ");
+			colors[2] = Terminal.readColor("\nPut the third color : ");
 			if (colors[2].equalsIgnoreCase(colors[0]) || colors[2].equalsIgnoreCase(colors[1])) {
 				invalid = true;
 				System.out.println("WARNING> THIS VALLUE IS INVALID!");
 			}
 			}while(invalid);
 		
-		times[0] = Terminal.readInt("Put the time of the first color : ",0);
-		times[1] = Terminal.readInt("Put the time of the second color : ",0);
-		times[2] = Terminal.readInt("Put the time of the third color : ",0);
+		times[0] = Terminal.readInt("\nPut the time of the first color : ",0);
+		times[1] = Terminal.readInt("\nPut the time of the second color : ",0);
+		times[2] = Terminal.readInt("\nPut the time of the third color : ",0);
 		
 		do{
 			invalid = false;
-			alert = Terminal.readInt("Tell the alert color [1,2,3] : ",0);
+			alert = Terminal.readInt("\nTell the alert color [1,2,3] : ",0);
 			if (alert > 3) invalid = true;
 		}while (invalid);
-		alert = Terminal.readInt("Tell the alert color [1,2,3] : ",0);
 
-		times[3] = Terminal.readInt("Put how many rounds should it operate normally : ",-1);
-		times[4] = Terminal.readInt("Put how many rounds should it operate in alert mode : ",-1);
+		times[3] = Terminal.readInt("\nPut how many rounds should it operate normally : ",-1);
+		times[4] = Terminal.readInt("\nPut how many rounds should it operate in alert mode : ",-1);
 
-		callSinal(colors,alert,times);
+		callSinal(colors,alert-1,times);
 	}
 	
 	
 
 	private static void callSinal(String[] colors, int alert, int[] times) {
-		System.out.println("Start Signal [y/n]");
 		boolean going = true;
 		String input = "";
 		while(going) {
+			System.out.println("\nStart Signal [y/n]");
 			going = false;
 			input = SC.next();
 			input = String.valueOf(input.charAt(0));
@@ -64,6 +63,7 @@ public class CommandSinal {
 			if (input.equalsIgnoreCase("n")) {
 				System.exit(-1);
 			}
+			going = true;
 		}
 	}
 	 
