@@ -16,7 +16,7 @@ public class CommandSinal {
 			do{
 				invalid = false;
 				colors[i] = Terminal.readColor("\nPut the color of the " + (i+1) + "º sinal : ");	
-				colors[i] = colors[i].trim();
+				
 				if(colors[i]==""){
 					invalid = true;
 					System.out.println("WARNING> THIS VALLUE IS INVALID!");
@@ -65,7 +65,6 @@ public class CommandSinal {
 		times[3] = Terminal.readInt("\nPut how many rounds should it operate normally : ",-1);
 		times[4] = Terminal.readInt("\nPut how many rounds should it operate in alert mode : ",-1);
 
-		System.out.println();
 		callSinal(colors,alert-1,times);
 	}
 	
@@ -80,6 +79,7 @@ public class CommandSinal {
 			input = SC.next();
 			input = String.valueOf(input.charAt(0));
 			if (input.equalsIgnoreCase("y")) {
+				System.out.println();
 				StartSinal.startSinal(colors, alert, times);
 			}
 			if (input.equalsIgnoreCase("n")) {

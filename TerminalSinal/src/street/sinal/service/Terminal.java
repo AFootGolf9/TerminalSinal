@@ -13,6 +13,7 @@ public class Terminal {
             try {
                 System.out.print(label);
                 timeRead = SC.nextLine();
+                timeRead = timeRead.trim();
                 Integer.parseInt(timeRead);
                 invalid = true;
                 System.out.println("WARNING> THIS VALLUE IS INVALID!");
