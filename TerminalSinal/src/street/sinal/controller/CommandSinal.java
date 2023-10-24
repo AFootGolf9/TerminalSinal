@@ -30,28 +30,6 @@ public class CommandSinal {
 			}while(invalid);
 		}
 		
-		
-		
-		// colors[0] = Terminal.readColor("\nPut the first color : ");
-
-		// do{
-		// 	invalid = false;
-		// 	colors[1] = Terminal.readColor("\nPut the second color : ");
-		// 	if (colors[1].equalsIgnoreCase(colors[0])) {
-		// 		invalid = true;
-		// 		System.out.println("WARNING> THIS VALLUE IS INVALID!");
-		// 	}
-		// }while(invalid);
-
-		// do{
-		// 	invalid = false;
-		// 	colors[2] = Terminal.readColor("\nPut the third color : ");
-		// 	if (colors[2].equalsIgnoreCase(colors[0]) || colors[2].equalsIgnoreCase(colors[1])) {
-		// 		invalid = true;
-		// 		System.out.println("WARNING> THIS VALLUE IS INVALID!");
-		// 	}
-		// }while(invalid);
-		
 		times[0] = Terminal.readInt("\nPut the time of the first color : ",0);
 		times[1] = Terminal.readInt("\nPut the time of the second color : ",0);
 		times[2] = Terminal.readInt("\nPut the time of the third color : ",0);
